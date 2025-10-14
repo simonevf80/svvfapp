@@ -42,68 +42,79 @@
 
 <body>
   <h1>Termini di Servizio</h1>
-  <p><strong>Ultimo aggiornamento:</strong> 10 ottobre 2025</p>
+  <p><strong>Ultimo aggiornamento:</strong> 14 ottobre 2025</p>
 
   <h2>1. Accettazione dei Termini</h2>
   <p>
-    Utilizzando l’applicazione <strong>SVVF</strong> (di seguito “l’App”), accetti integralmente i presenti Termini di Servizio.  
-    Se non accetti uno o più punti di questa informativa, ti invitiamo a non utilizzare l’App.
+    Utilizzando l’applicazione <strong>SVVF</strong> (di seguito “l’App”), accetti integralmente i presenti Termini di Servizio e l’<a href="privacy.html">Informativa sulla Privacy</a>.  
+    Se non accetti uno o più punti, ti invitiamo a non utilizzare l’App.
   </p>
 
   <h2>2. Descrizione del Servizio</h2>
   <p>
-    SVVF è un’app progettata per aiutarti a gestire eventi, turni, ferie, indennità e pagamenti, con sincronizzazione automatica tramite <strong>iCloud</strong> e possibilità di integrazione opzionale con <strong>Google Calendar</strong> e <strong>Calendario Apple</strong>.
+    SVVF è un’applicazione sviluppata per aiutarti a gestire turni, ferie, indennità e pagamenti in modo chiaro e sicuro.  
+    L’app può sincronizzare i tuoi eventi con <strong>Apple iCloud</strong> e, in maniera totalmente <strong>opzionale</strong>, con <strong>Google Calendar</strong>.
   </p>
   <p>
-    Tutte le funzioni sono pensate per semplificare la pianificazione personale e lavorativa, mantenendo i dati dell’utente al sicuro e sempre sotto il suo controllo.
+    Tutte le funzioni hanno l’unico scopo di permettere all’utente di visualizzare, creare, modificare o eliminare eventi nel proprio calendario personale, mantenendo pieno controllo sui dati.
   </p>
 
   <h2>3. Requisiti di utilizzo</h2>
   <ul>
-    <li>È necessario disporre di un dispositivo compatibile e, in caso di sincronizzazione, di un account valido (es. account Google o Apple).</li>
-    <li>L’utente è responsabile dell’accuratezza dei dati inseriti e delle azioni compiute, come la creazione, modifica o eliminazione di eventi.</li>
-    <li>L’uso dell’App è consentito esclusivamente per scopi personali e leciti.</li>
+    <li>È necessario disporre di un dispositivo compatibile con iOS e, per la sincronizzazione esterna, di un account Google o Apple valido.</li>
+    <li>L’utente è responsabile delle informazioni inserite e delle operazioni effettuate (creazione, modifica o eliminazione di eventi).</li>
+    <li>L’uso dell’app è consentito esclusivamente per scopi personali e leciti.</li>
   </ul>
 
   <h2>4. Sincronizzazione e Integrazioni</h2>
-  <h3>4.1 Sincronizzazione iCloud</h3>
+
+  <h3>4.1 Integrazione con Google Calendar</h3>
   <p>
-    L’App utilizza <strong>iCloud</strong> per salvare in modo sicuro le informazioni personali e i dati relativi agli eventi SVVF.  
-    Grazie a questa integrazione, i tuoi dati restano sempre accessibili e sincronizzati su tutti i tuoi dispositivi Apple, evitando qualsiasi perdita accidentale.
+    L’integrazione con Google Calendar è facoltativa e può essere attivata solo dopo il consenso esplicito dell’utente.  
+    L’App utilizza il sistema di sicurezza <strong>OAuth 2.0</strong> di Google per l’autenticazione e richiede esclusivamente il seguente ambito (<em>scope</em>):
   </p>
 
-  <h3>4.2 Integrazione con Google Calendar e Calendario Apple</h3>
-  <p>
-    L’App offre la possibilità di collegarsi a <strong>Google Calendar</strong> e al <strong>Calendario Apple</strong> per sincronizzare eventi e pianificazioni.  
-    Questa funzione è <strong>opzionale</strong> e può essere attivata o disattivata in qualsiasi momento tramite le <strong>Impostazioni dell’app</strong>.
-  </p>
-  <p>
-    Quando colleghi il tuo account Google, autorizzi SVVF ad accedere ai tuoi calendari tramite il sistema di sicurezza <strong>OAuth 2.0</strong>, limitatamente allo scope:
-  </p>
   <p><code>https://www.googleapis.com/auth/calendar.events</code></p>
+
   <p>
-    Tale autorizzazione permette all’App di <strong>visualizzare, creare, modificare o eliminare eventi</strong> nei calendari a cui hai accesso, al solo fine di mantenere la sincronizzazione tra SVVF e Google Calendar.  
-    Nessuna informazione aggiuntiva viene raccolta o condivisa con terze parti.
+    Tale ambito consente all’App di:
   </p>
+  <ul>
+    <li>Visualizzare gli eventi presenti nel tuo Google Calendar.</li>
+    <li>Creare nuovi eventi da SVVF.</li>
+    <li>Modificare o eliminare eventi già esistenti, solo su tua esplicita azione.</li>
+  </ul>
+
   <p>
-    Puoi revocare in ogni momento l’accesso dell’app SVVF dal tuo account Google visitando  
+    Queste operazioni avvengono esclusivamente per permettere la sincronizzazione tra l’app e il tuo calendario Google.  
+    Nessun altro dato viene raccolto o trattato, e l’App non utilizza, memorizza o condivide informazioni personali, titoli o contenuti degli eventi con terze parti o server esterni.
+  </p>
+
+  <p>
+    L’utente può revocare in qualunque momento l’accesso dell’app SVVF al proprio account Google visitando:  
     <a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a>.
   </p>
 
-  <h2>5. Privacy e sicurezza dei dati</h2>
+  <h3>4.2 Sincronizzazione con iCloud</h3>
   <p>
-    La protezione dei dati personali è una priorità per SVVF.  
-    Tutti i dati restano esclusivamente sotto il controllo dell’utente e vengono utilizzati unicamente per offrire le funzionalità dell’applicazione.
+    L’app SVVF utilizza iCloud per mantenere sincronizzati in sicurezza eventi, preferenze e dati dell’utente sui dispositivi Apple associati allo stesso ID Apple.  
+    Nessuna informazione viene inviata a server esterni diversi da quelli di Apple.
+  </p>
+
+  <h2>5. Privacy e protezione dei dati</h2>
+  <p>
+    SVVF tratta i dati dell’utente nel pieno rispetto del <strong>Regolamento (UE) 2016/679 (GDPR)</strong> e delle <strong>policy di Google per gli sviluppatori</strong>.  
+    I dati personali restano sotto il totale controllo dell’utente e vengono utilizzati solo per fornire le funzionalità richieste (sincronizzazione degli eventi).
   </p>
   <p>
-    Nessun dato viene ceduto, condiviso o utilizzato per scopi pubblicitari o di profilazione.  
-    Per ulteriori dettagli, consulta la <a href="privacy.html">Informativa sulla Privacy</a>.
+    Nessuna informazione viene condivisa per finalità pubblicitarie, di analisi o di profilazione.  
+    Maggiori dettagli sono disponibili nell’<a href="privacy.html">Informativa sulla Privacy</a>.
   </p>
 
   <h2>6. Limitazioni di responsabilità</h2>
   <p>
-    L’App è fornita “così com’è”, senza garanzia di disponibilità continua o assenza di errori.  
-    Nei limiti consentiti dalla legge, gli sviluppatori non sono responsabili per eventuali danni indiretti o consequenziali derivanti dall’uso dell’App, inclusa la perdita di dati o di opportunità.
+    L’App è fornita “così com’è”, senza garanzie esplicite o implicite di disponibilità continua o assenza di errori.  
+    Nei limiti previsti dalla legge, gli sviluppatori non sono responsabili per eventuali perdite di dati, interruzioni del servizio o danni derivanti da un uso improprio dell’applicazione.
   </p>
 
   <h2>7. Uso corretto</h2>
@@ -111,33 +122,26 @@
     È vietato utilizzare l’App per:
   </p>
   <ul>
-    <li>Scopi illeciti o contrari alla normativa vigente.</li>
-    <li>Violazione dei diritti di terzi.</li>
-    <li>Tentativi di accesso non autorizzato a dati di altri utenti o ai sistemi di SVVF.</li>
+    <li>Scopi contrari alla legge o che violino diritti di terzi.</li>
+    <li>Alterare, copiare o distribuire parti dell’app senza autorizzazione.</li>
+    <li>Tentare di accedere a dati o account di altri utenti.</li>
   </ul>
 
   <h2>8. Proprietà intellettuale</h2>
   <p>
-    Tutti i diritti relativi all’App, al nome <strong>SVVF</strong>, ai loghi e ai contenuti testuali o grafici appartengono al relativo sviluppatore.  
-    È vietata la copia, distribuzione o modifica non autorizzata dei contenuti o del codice dell’applicazione.
+    Tutti i diritti relativi a <strong>SVVF</strong>, al nome, ai loghi e al codice sorgente appartengono al rispettivo sviluppatore.  
+    È vietata la riproduzione o la distribuzione del materiale senza consenso scritto dell’autore.
   </p>
 
-  <h2>9. Sospensione o cessazione del servizio</h2>
+  <h2>9. Modifiche e aggiornamenti</h2>
   <p>
-    Gli sviluppatori si riservano il diritto di sospendere o interrompere temporaneamente l’accesso all’App in caso di manutenzione, motivi tecnici o violazioni dei presenti Termini.  
-    In tali casi, verranno adottate tutte le misure possibili per ridurre i disagi per gli utenti.
+    Gli sviluppatori possono aggiornare i presenti Termini di Servizio per motivi tecnici, legali o funzionali.  
+    Le modifiche entreranno in vigore alla loro pubblicazione su questa pagina, con la data di ultimo aggiornamento indicata in alto.
   </p>
 
-  <h2>10. Modifiche ai Termini</h2>
+  <h2>10. Contatti</h2>
   <p>
-    I presenti Termini di Servizio possono essere aggiornati periodicamente.  
-    Le modifiche saranno pubblicate su questa pagina con la data di ultimo aggiornamento.  
-    L’uso continuato dell’App dopo tali modifiche implica l’accettazione delle nuove condizioni.
-  </p>
-
-  <h2>11. Contatti</h2>
-  <p>
-    Per domande, segnalazioni o chiarimenti relativi ai Termini di Servizio o all’utilizzo dell’App, puoi scrivere a:  
+    Per chiarimenti o richieste relative a questi Termini puoi scrivere a:  
     <a href="mailto:simonevf80@icloud.com">simonevf80@icloud.com</a>
   </p>
 
