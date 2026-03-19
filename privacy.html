@@ -9,6 +9,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       max-width: 700px;
       margin: 40px auto;
+      padding: 0 16px;
       line-height: 1.6;
       color: #222;
     }
@@ -22,6 +23,9 @@
       border-bottom: 2px solid #007aff;
       padding-bottom: 4px;
       margin-top: 30px;
+    }
+    h3 {
+      margin-top: 20px;
     }
     p {
       margin-bottom: 15px;
@@ -37,117 +41,206 @@
     a:hover {
       text-decoration: underline;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 0.95em;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background: #f0f0f0;
+    }
   </style>
 </head>
 
 <body>
   <h1>Informativa sulla Privacy</h1>
-  <p><strong>Ultimo aggiornamento:</strong> 14 ottobre 2025</p>
+  <p><strong>Ultimo aggiornamento:</strong> 19 marzo 2026</p>
+  <p><strong>Titolare del trattamento:</strong> Simone Santini &ndash; <a href="mailto:simonevf80@icloud.com">simonevf80@icloud.com</a></p>
 
   <h2>1. Introduzione</h2>
   <p>
-    La presente informativa descrive come l’applicazione <strong>SVVF</strong> (di seguito “l’App”, “noi”) raccoglie, utilizza e protegge i dati personali degli utenti.  
-    Utilizzando l’App, accetti le pratiche descritte in questa informativa e autorizzi il trattamento dei tuoi dati secondo quanto indicato di seguito.
+    La presente informativa descrive come l'applicazione <strong>SVVF</strong> (di seguito "l'App"), disponibile per <strong>iOS</strong> e <strong>Android</strong>, raccoglie, utilizza e protegge i dati personali degli utenti.
+    Utilizzando l'App, accetti le pratiche descritte in questa informativa e autorizzi il trattamento dei tuoi dati secondo quanto indicato di seguito.
   </p>
 
   <h2>2. Dati trattati</h2>
 
-  <h3>2.1 Dati inseriti manualmente</h3>
+  <h3>2.1 Dati inseriti manualmente dall'utente</h3>
   <ul>
-    <li>Informazioni relative agli eventi (titolo, note, luogo, orari, importi, turni, ecc.).</li>
-    <li>Preferenze e impostazioni personali dell’applicazione.</li>
+    <li>Dati personali: nome, cognome, email, ruolo, carriera, grado.</li>
+    <li>Informazioni relative agli eventi: titolo, note, luogo, orari, importi, turni.</li>
+    <li>Preferenze e impostazioni personali dell'applicazione (ferie, banca ore, visualizzazione).</li>
+    <li>Foto profilo (opzionale), ridimensionata e salvata localmente.</li>
   </ul>
 
-  <h3>2.2 Dati provenienti da servizi esterni (Google Calendar)</h3>
+  <h3>2.2 Dati provenienti da Google Calendar</h3>
   <p>
-    Se scegli di collegare il tuo account <strong>Google Calendar</strong>, l’App accederà ai tuoi eventi solo dopo la tua autorizzazione esplicita tramite il sistema di autenticazione ufficiale di Google (<strong>OAuth 2.0</strong>).
-  </p>
-  <p>
-    L’unico ambito (<em>scope</em>) utilizzato è:
+    Se scegli di collegare il tuo account <strong>Google Calendar</strong>, l'App accederà ai tuoi eventi solo dopo la tua autorizzazione esplicita tramite <strong>OAuth 2.0</strong>.
+    L'unico ambito (<em>scope</em>) utilizzato è:
     <br><code>https://www.googleapis.com/auth/calendar.events</code>
   </p>
   <p>
-    Questo consente a SVVF di <strong>leggere, creare, modificare ed eliminare eventi</strong> nel tuo calendario Google, esclusivamente per fornirti le funzionalità di sincronizzazione integrate nell’app.
+    Questo consente a SVVF di leggere, creare, modificare ed eliminare eventi nel tuo calendario Google, esclusivamente per la sincronizzazione integrata nell'app.
   </p>
 
-  <h3>2.3 Dati gestiti tramite iCloud</h3>
+  <h3>2.3 Dati gestiti tramite servizi cloud</h3>
+  <p><strong>iOS:</strong> SVVF utilizza <strong>Apple iCloud</strong> (CloudKit e NSUbiquitousKeyValueStore) per sincronizzare eventi, configurazioni e impostazioni tra i dispositivi Apple dell'utente. I dati restano nel database privato iCloud associato all'ID Apple dell'utente.</p>
+  <p><strong>Android:</strong> SVVF utilizza <strong>Google Firebase</strong> (Authentication e Firestore) per la sincronizzazione cloud. L'accesso avviene tramite Google Sign-In ed è facoltativo. Senza login, i dati restano esclusivamente sul dispositivo. I dati sincronizzati sono archiviati su Firebase Firestore sotto l'account Google dell'utente.</p>
+
+  <h3>2.4 Dati dal Calendario Apple (solo iOS)</h3>
   <p>
-    SVVF utilizza <strong>Apple iCloud</strong> per salvare e sincronizzare in sicurezza dati locali come preferenze e impostazioni, evitando qualsiasi archiviazione su server esterni non appartenenti ad Apple o a Google.
+    Su iOS, l'App può accedere al <strong>Calendario Apple</strong> nativo tramite il framework EventKit, previa autorizzazione dell'utente. Gli eventi vengono letti localmente e non vengono trasmessi a server esterni.
+  </p>
+
+  <h3>2.5 Dati raccolti automaticamente (solo Android)</h3>
+  <p>
+    La versione Android utilizza <strong>Firebase Crashlytics</strong> per raccogliere automaticamente informazioni anonime sugli arresti anomali dell'app (crash report). Questi dati non contengono informazioni personali identificabili e vengono utilizzati esclusivamente per migliorare la stabilità dell'app.
   </p>
 
   <h2>3. Finalità del trattamento</h2>
   <ul>
-    <li>Mostrare e gestire gli eventi del calendario dell’utente all’interno dell’app.</li>
-    <li>Sincronizzare gli eventi con Google Calendar, se l’utente ha attivato l’integrazione.</li>
-    <li>Garantire il corretto funzionamento e la personalizzazione dell’esperienza d’uso dell’app.</li>
+    <li>Mostrare e gestire gli eventi del calendario dell'utente.</li>
+    <li>Sincronizzare gli eventi con i servizi cloud (iCloud o Firebase) e Google Calendar, se attivati dall'utente.</li>
+    <li>Generare report e statistiche (PDF) per uso personale dell'utente.</li>
+    <li>Garantire il corretto funzionamento e la personalizzazione dell'esperienza d'uso.</li>
+    <li>Migliorare la stabilità dell'app tramite crash reporting anonimo (Android).</li>
   </ul>
 
   <h2>4. Base giuridica del trattamento</h2>
   <p>
-    Il trattamento dei dati si basa sul <strong>consenso esplicito dell’utente</strong>, espresso durante la procedura di autorizzazione Google (OAuth), e sulla necessità di eseguire le funzioni richieste all’interno dell’app.
+    Il trattamento dei dati si basa sul <strong>consenso esplicito dell'utente</strong>, espresso durante:
   </p>
+  <ul>
+    <li>L'autorizzazione OAuth per Google Calendar e Google Sign-In.</li>
+    <li>La concessione dei permessi del sistema operativo (calendario, notifiche, posizione).</li>
+    <li>L'utilizzo volontario delle funzionalità di sincronizzazione cloud.</li>
+  </ul>
 
   <h2>5. Conservazione e gestione dei dati</h2>
+  <table>
+    <tr>
+      <th>Piattaforma</th>
+      <th>Archiviazione locale</th>
+      <th>Archiviazione cloud</th>
+    </tr>
+    <tr>
+      <td>iOS</td>
+      <td>UserDefaults, file system (allegati)</td>
+      <td>Apple iCloud (CloudKit privato)</td>
+    </tr>
+    <tr>
+      <td>Android</td>
+      <td>DataStore, Room Database (SQLite)</td>
+      <td>Google Firebase Firestore</td>
+    </tr>
+  </table>
   <ul>
-    <li>I dati dell’utente restano sul dispositivo o all’interno dei servizi Apple (iCloud) e Google (Calendar) sotto il pieno controllo dell’utente.</li>
-    <li>L’app non utilizza server propri e non archivia dati sensibili su sistemi esterni.</li>
-    <li>SVVF non conserva token di accesso Google oltre la durata della sessione necessaria alla sincronizzazione.</li>
+    <li>L'App non utilizza server propri e non archivia dati su sistemi esterni diversi da Apple iCloud, Google Firebase e Google Calendar.</li>
+    <li>I dati cloud sono accessibili esclusivamente dall'account dell'utente (ID Apple o account Google).</li>
+    <li>I token di accesso Google non vengono conservati oltre la sessione di sincronizzazione.</li>
+    <li>Su Android, il sistema di backup automatico di Google può includere i dati dell'app per il ripristino dopo reinstallazione.</li>
   </ul>
 
   <h2>6. Condivisione dei dati</h2>
   <p>
-    I dati non vengono condivisi, ceduti o venduti a terzi.  
-    L’unico soggetto con cui i dati possono interagire è <strong>Google LLC</strong>, per le sole finalità di sincronizzazione del calendario, nel rispetto dei permessi concessi.
+    I dati non vengono condivisi, ceduti o venduti a terzi.
+    I soggetti con cui i dati possono interagire sono esclusivamente:
   </p>
+  <ul>
+    <li><strong>Apple Inc.</strong> — per la sincronizzazione iCloud (iOS).</li>
+    <li><strong>Google LLC</strong> — per Google Calendar, Firebase Authentication, Firebase Firestore e Firebase Crashlytics (Android).</li>
+  </ul>
   <p>
     Le informazioni non vengono mai utilizzate per scopi pubblicitari, analitici o di profilazione.
   </p>
 
   <h2>7. Sicurezza</h2>
   <p>
-    L’applicazione adotta misure tecniche e organizzative adeguate per proteggere i dati da accessi non autorizzati, perdite o modifiche accidentali.  
-    Tuttavia, nessun sistema può garantire sicurezza assoluta; per questo è sempre consigliato mantenere aggiornati i propri dispositivi e password.
+    L'applicazione adotta misure tecniche adeguate per proteggere i dati:
   </p>
-
-  <h2>8. Diritti dell’utente</h2>
   <ul>
-    <li>Revocare in qualsiasi momento l’accesso di SVVF al proprio account Google visitando  
+    <li>Tutte le comunicazioni avvengono tramite <strong>HTTPS</strong> (TLS).</li>
+    <li>I dati cloud sono crittografati in transito e a riposo dai rispettivi provider (Apple, Google).</li>
+    <li>I dati locali sono protetti dal sistema di sandboxing del sistema operativo.</li>
+    <li>L'autenticazione avviene tramite i sistemi ufficiali di Apple e Google (OAuth 2.0).</li>
+  </ul>
+
+  <h2>8. Permessi richiesti</h2>
+  <table>
+    <tr>
+      <th>Permesso</th>
+      <th>iOS</th>
+      <th>Android</th>
+      <th>Finalità</th>
+    </tr>
+    <tr>
+      <td>Internet</td>
+      <td>Implicito</td>
+      <td>Richiesto</td>
+      <td>Sincronizzazione cloud e Google Calendar</td>
+    </tr>
+    <tr>
+      <td>Calendario</td>
+      <td>On-demand</td>
+      <td>On-demand</td>
+      <td>Lettura/scrittura calendario nativo</td>
+    </tr>
+    <tr>
+      <td>Notifiche</td>
+      <td>On-demand</td>
+      <td>On-demand (API 33+)</td>
+      <td>Promemoria eventi</td>
+    </tr>
+  </table>
+  <p>Tutti i permessi vengono richiesti nel momento in cui servono e possono essere revocati dalle impostazioni del dispositivo.</p>
+
+  <h2>9. Diritti dell'utente</h2>
+  <p>L'utente ha diritto di:</p>
+  <ul>
+    <li>Revocare in qualsiasi momento l'accesso di SVVF al proprio account Google visitando
       <a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a>.</li>
-    <li>Modificare o eliminare gli eventi direttamente da Google Calendar o dall’app SVVF.</li>
-    <li>Richiedere la cancellazione dei dati locali cancellando l’app dal dispositivo.</li>
-    <li>Esercitare i diritti previsti dal Regolamento UE 2016/679 (GDPR) contattandoci tramite email.</li>
+    <li>Modificare o eliminare gli eventi direttamente dall'app.</li>
+    <li>Disattivare la sincronizzazione cloud dalle impostazioni dell'app.</li>
+    <li>Richiedere la cancellazione dei dati locali disinstallando l'app.</li>
+    <li>Richiedere la cancellazione dei dati cloud eliminando il proprio account o contattando lo sviluppatore.</li>
+    <li>Esercitare i diritti previsti dal Regolamento UE 2016/679 (GDPR): accesso, rettifica, cancellazione, limitazione, portabilità e opposizione al trattamento, contattando <a href="mailto:simonevf80@icloud.com">simonevf80@icloud.com</a>.</li>
   </ul>
 
-  <h2>9. Servizi di terze parti</h2>
-  <p>
-    SVVF utilizza esclusivamente le API ufficiali di <strong>Google Calendar</strong> e i servizi <strong>Apple iCloud</strong>.  
-    L’utilizzo di questi servizi è soggetto anche alle rispettive politiche sulla privacy e termini di servizio:
-  </p>
+  <h2>10. Servizi di terze parti</h2>
+  <p>SVVF utilizza i seguenti servizi di terze parti, soggetti alle rispettive politiche sulla privacy:</p>
   <ul>
-    <li><a href="https://policies.google.com/privacy" target="_blank">Norme sulla privacy di Google</a></li>
-    <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Informativa sulla privacy di Apple</a></li>
+    <li><strong>Apple iCloud / CloudKit</strong> (iOS) — <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Apple</a></li>
+    <li><strong>Google Calendar API</strong> (iOS e Android) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li>
+    <li><strong>Google Firebase</strong> (Android: Authentication, Firestore, Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Firebase</a></li>
+    <li><strong>Google Sign-In</strong> (entrambe le piattaforme) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li>
   </ul>
 
-  <h2>10. Trasferimenti internazionali</h2>
+  <h2>11. Trasferimenti internazionali</h2>
   <p>
-    L’uso dei servizi Google e Apple può comportare trasferimenti di dati al di fuori del tuo paese di residenza.  
-    Tali trasferimenti avvengono secondo le misure di sicurezza e le garanzie previste dai rispettivi fornitori.
+    L'uso dei servizi Google e Apple può comportare trasferimenti di dati al di fuori dello Spazio Economico Europeo.
+    Tali trasferimenti avvengono nel rispetto delle garanzie previste dal GDPR, incluse le Clausole Contrattuali Standard adottate dai rispettivi provider.
   </p>
 
-  <h2>11. Modifiche alla presente informativa</h2>
+  <h2>12. Modifiche alla presente informativa</h2>
   <p>
-    Potremmo aggiornare periodicamente questa informativa per adeguarla a modifiche normative o funzionali dell’app.  
+    Potremmo aggiornare periodicamente questa informativa per adeguarla a modifiche normative o funzionali dell'app.
     La versione più recente sarà sempre disponibile su questa pagina, con la data di ultimo aggiornamento.
   </p>
 
-  <h2>12. Contatti</h2>
+  <h2>13. Contatti</h2>
   <p>
-    Per qualsiasi informazione o richiesta relativa alla privacy puoi scrivere a:  
+    Per qualsiasi informazione o richiesta relativa alla privacy puoi scrivere a:
     <a href="mailto:simonevf80@icloud.com">simonevf80@icloud.com</a>
   </p>
 
   <footer style="text-align: center; font-size: 0.9em; color: #777; margin-top: 40px;">
-    © 2025 SVVF – Tutti i diritti riservati.
+    &copy; 2026 SVVF &ndash; Tutti i diritti riservati.
   </footer>
 </body>
 </html>

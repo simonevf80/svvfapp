@@ -9,6 +9,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       max-width: 700px;
       margin: 40px auto;
+      padding: 0 16px;
       line-height: 1.6;
       color: #222;
     }
@@ -22,6 +23,9 @@
       border-bottom: 2px solid #007aff;
       padding-bottom: 4px;
       margin-top: 30px;
+    }
+    h3 {
+      margin-top: 20px;
     }
     p {
       margin-bottom: 15px;
@@ -42,111 +46,123 @@
 
 <body>
   <h1>Termini di Servizio</h1>
-  <p><strong>Ultimo aggiornamento:</strong> 14 ottobre 2025</p>
+  <p><strong>Ultimo aggiornamento:</strong> 19 marzo 2026</p>
 
   <h2>1. Accettazione dei Termini</h2>
   <p>
-    Utilizzando l’applicazione <strong>SVVF</strong> (di seguito “l’App”), accetti integralmente i presenti Termini di Servizio e l’<a href="privacy.html">Informativa sulla Privacy</a>.  
-    Se non accetti uno o più punti, ti invitiamo a non utilizzare l’App.
+    Utilizzando l'applicazione <strong>SVVF</strong> (di seguito "l'App"), disponibile per iOS e Android, accetti integralmente i presenti Termini di Servizio e l'<a href="privacy.html">Informativa sulla Privacy</a>.
+    Se non accetti uno o più punti, ti invitiamo a non utilizzare l'App.
   </p>
 
   <h2>2. Descrizione del Servizio</h2>
   <p>
-    SVVF è un’applicazione sviluppata per aiutarti a gestire turni, ferie, indennità e pagamenti in modo chiaro e sicuro.  
-    L’app può sincronizzare i tuoi eventi con <strong>Apple iCloud</strong> e, in maniera totalmente <strong>opzionale</strong>, con <strong>Google Calendar</strong>.
+    SVVF è un'applicazione sviluppata per aiutare il personale dei Vigili del Fuoco a gestire turni, ferie, indennità e pagamenti in modo chiaro e sicuro.
+    L'App è disponibile in due versioni — iOS e Android — con funzionalità equivalenti.
   </p>
   <p>
-    Tutte le funzioni hanno l’unico scopo di permettere all’utente di visualizzare, creare, modificare o eliminare eventi nel proprio calendario personale, mantenendo pieno controllo sui dati.
+    L'App può sincronizzare i tuoi dati con:
+  </p>
+  <ul>
+    <li><strong>Apple iCloud</strong> (versione iOS) — sincronizzazione automatica tramite CloudKit.</li>
+    <li><strong>Google Firebase</strong> (versione Android) — sincronizzazione facoltativa tramite accesso con account Google.</li>
+    <li><strong>Google Calendar</strong> (entrambe le versioni) — integrazione facoltativa per la gestione degli eventi.</li>
+    <li><strong>Apple Calendar</strong> (solo iOS) — integrazione facoltativa tramite EventKit.</li>
+  </ul>
+  <p>
+    Tutte le funzioni hanno l'unico scopo di permettere all'utente di gestire il proprio calendario personale, mantenendo pieno controllo sui dati.
   </p>
 
   <h2>3. Requisiti di utilizzo</h2>
   <ul>
-    <li>È necessario disporre di un dispositivo compatibile con iOS e, per la sincronizzazione esterna, di un account Google o Apple valido.</li>
-    <li>L’utente è responsabile delle informazioni inserite e delle operazioni effettuate (creazione, modifica o eliminazione di eventi).</li>
-    <li>L’uso dell’app è consentito esclusivamente per scopi personali e leciti.</li>
+    <li>È necessario disporre di un dispositivo compatibile con iOS (16.0+) o Android (8.0+).</li>
+    <li>Per la sincronizzazione cloud è necessario un account Apple (iOS) o Google (Android).</li>
+    <li>L'utente è responsabile delle informazioni inserite e delle operazioni effettuate.</li>
+    <li>L'uso dell'App è consentito esclusivamente per scopi personali e leciti.</li>
   </ul>
 
   <h2>4. Sincronizzazione e Integrazioni</h2>
 
   <h3>4.1 Integrazione con Google Calendar</h3>
   <p>
-    L’integrazione con Google Calendar è facoltativa e può essere attivata solo dopo il consenso esplicito dell’utente.  
-    L’App utilizza il sistema di sicurezza <strong>OAuth 2.0</strong> di Google per l’autenticazione e richiede esclusivamente il seguente ambito (<em>scope</em>):
+    Disponibile su entrambe le piattaforme. L'integrazione è facoltativa e richiede autorizzazione esplicita tramite <strong>OAuth 2.0</strong>.
+    L'unico ambito (<em>scope</em>) utilizzato è:
   </p>
-
   <p><code>https://www.googleapis.com/auth/calendar.events</code></p>
-
-  <p>
-    Tale ambito consente all’App di:
-  </p>
+  <p>Tale ambito consente all'App di:</p>
   <ul>
     <li>Visualizzare gli eventi presenti nel tuo Google Calendar.</li>
     <li>Creare nuovi eventi da SVVF.</li>
     <li>Modificare o eliminare eventi già esistenti, solo su tua esplicita azione.</li>
   </ul>
-
   <p>
-    Queste operazioni avvengono esclusivamente per permettere la sincronizzazione tra l’app e il tuo calendario Google.  
-    Nessun altro dato viene raccolto o trattato, e l’App non utilizza, memorizza o condivide informazioni personali, titoli o contenuti degli eventi con terze parti o server esterni.
-  </p>
-
-  <p>
-    L’utente può revocare in qualunque momento l’accesso dell’app SVVF al proprio account Google visitando:  
+    Nessun altro dato viene raccolto o trattato. L'App non utilizza, memorizza o condivide contenuti degli eventi con terze parti.
+    L'utente può revocare l'accesso in qualunque momento visitando:
     <a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a>.
   </p>
 
-  <h3>4.2 Sincronizzazione con iCloud</h3>
+  <h3>4.2 Sincronizzazione iCloud (solo iOS)</h3>
   <p>
-    L’app SVVF utilizza iCloud per mantenere sincronizzati in sicurezza eventi, preferenze e dati dell’utente sui dispositivi Apple associati allo stesso ID Apple.  
+    La versione iOS utilizza iCloud per mantenere sincronizzati eventi, preferenze e configurazioni sui dispositivi Apple associati allo stesso ID Apple.
     Nessuna informazione viene inviata a server esterni diversi da quelli di Apple.
+  </p>
+
+  <h3>4.3 Sincronizzazione Firebase (solo Android)</h3>
+  <p>
+    La versione Android utilizza Google Firebase per la sincronizzazione cloud. L'accesso avviene tramite Google Sign-In ed è completamente facoltativo.
+    Senza login, l'App funziona normalmente con i dati salvati localmente sul dispositivo.
+    I dati sincronizzati sono archiviati su Firebase Firestore e accessibili esclusivamente dall'account Google dell'utente.
+  </p>
+
+  <h3>4.4 Apple Calendar (solo iOS)</h3>
+  <p>
+    L'App può accedere al Calendario Apple nativo per visualizzare gli eventi. Questa integrazione è facoltativa e richiede il permesso esplicito dell'utente tramite il sistema di autorizzazione iOS.
   </p>
 
   <h2>5. Privacy e protezione dei dati</h2>
   <p>
-    SVVF tratta i dati dell’utente nel pieno rispetto del <strong>Regolamento (UE) 2016/679 (GDPR)</strong> e delle <strong>policy di Google per gli sviluppatori</strong>.  
-    I dati personali restano sotto il totale controllo dell’utente e vengono utilizzati solo per fornire le funzionalità richieste (sincronizzazione degli eventi).
+    SVVF tratta i dati dell'utente nel pieno rispetto del <strong>Regolamento (UE) 2016/679 (GDPR)</strong> e delle policy di Google e Apple per gli sviluppatori.
+    I dati personali restano sotto il totale controllo dell'utente e vengono utilizzati solo per fornire le funzionalità dell'App.
   </p>
   <p>
-    Nessuna informazione viene condivisa per finalità pubblicitarie, di analisi o di profilazione.  
-    Maggiori dettagli sono disponibili nell’<a href="privacy.html">Informativa sulla Privacy</a>.
+    Nessuna informazione viene condivisa per finalità pubblicitarie, di analisi o di profilazione.
+    Maggiori dettagli sono disponibili nell'<a href="privacy.html">Informativa sulla Privacy</a>.
   </p>
 
   <h2>6. Limitazioni di responsabilità</h2>
   <p>
-    L’App è fornita “così com’è”, senza garanzie esplicite o implicite di disponibilità continua o assenza di errori.  
-    Nei limiti previsti dalla legge, gli sviluppatori non sono responsabili per eventuali perdite di dati, interruzioni del servizio o danni derivanti da un uso improprio dell’applicazione.
+    L'App è fornita "così com'è", senza garanzie esplicite o implicite di disponibilità continua o assenza di errori.
+    Lo sviluppatore non è responsabile per eventuali perdite di dati, interruzioni del servizio o danni derivanti da un uso improprio dell'applicazione o dalla mancata attivazione della sincronizzazione cloud.
   </p>
 
   <h2>7. Uso corretto</h2>
-  <p>
-    È vietato utilizzare l’App per:
-  </p>
+  <p>È vietato utilizzare l'App per:</p>
   <ul>
     <li>Scopi contrari alla legge o che violino diritti di terzi.</li>
-    <li>Alterare, copiare o distribuire parti dell’app senza autorizzazione.</li>
+    <li>Alterare, copiare o distribuire parti dell'App senza autorizzazione.</li>
     <li>Tentare di accedere a dati o account di altri utenti.</li>
+    <li>Utilizzare l'App per raccogliere dati personali di terzi.</li>
   </ul>
 
   <h2>8. Proprietà intellettuale</h2>
   <p>
-    Tutti i diritti relativi a <strong>SVVF</strong>, al nome, ai loghi e al codice sorgente appartengono al rispettivo sviluppatore.  
-    È vietata la riproduzione o la distribuzione del materiale senza consenso scritto dell’autore.
+    Tutti i diritti relativi a <strong>SVVF</strong>, al nome, ai loghi, alle icone e al codice sorgente appartengono allo sviluppatore Simone Santini.
+    È vietata la riproduzione o la distribuzione del materiale senza consenso scritto dell'autore.
   </p>
 
   <h2>9. Modifiche e aggiornamenti</h2>
   <p>
-    Gli sviluppatori possono aggiornare i presenti Termini di Servizio per motivi tecnici, legali o funzionali.  
-    Le modifiche entreranno in vigore alla loro pubblicazione su questa pagina, con la data di ultimo aggiornamento indicata in alto.
+    Lo sviluppatore può aggiornare i presenti Termini di Servizio per motivi tecnici, legali o funzionali.
+    Le modifiche entreranno in vigore alla loro pubblicazione su questa pagina.
   </p>
 
   <h2>10. Contatti</h2>
   <p>
-    Per chiarimenti o richieste relative a questi Termini puoi scrivere a:  
+    Per chiarimenti o richieste relative a questi Termini puoi scrivere a:
     <a href="mailto:simonevf80@icloud.com">simonevf80@icloud.com</a>
   </p>
 
   <footer style="text-align: center; font-size: 0.9em; color: #777; margin-top: 40px;">
-    © 2025 SVVF – Tutti i diritti riservati.
+    &copy; 2026 SVVF &ndash; Tutti i diritti riservati.
   </footer>
 </body>
 </html>
