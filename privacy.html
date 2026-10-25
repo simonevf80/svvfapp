@@ -60,7 +60,7 @@
 
 <body>
   <h1>Informativa sulla Privacy</h1>
-  <p><strong>Ultimo aggiornamento:</strong> 19 marzo 2026</p>
+  <p><strong>Ultimo aggiornamento:</strong> 25 ottobre 2026</p>
   <p><strong>Titolare del trattamento:</strong> Simone Santini &ndash; <a href="mailto:simonevf80@icloud.com">simonevf80@icloud.com</a></p>
 
   <h2>1. Introduzione</h2>
@@ -81,26 +81,32 @@
 
   <h3>2.2 Dati provenienti da Google Calendar</h3>
   <p>
-    Se scegli di collegare il tuo account <strong>Google Calendar</strong>, l'App accederà ai tuoi eventi solo dopo la tua autorizzazione esplicita tramite <strong>OAuth 2.0</strong>.
-    L'unico ambito (<em>scope</em>) utilizzato è:
-    <br><code>https://www.googleapis.com/auth/calendar.events</code>
+    Se scegli di collegare il tuo account <strong>Google Calendar</strong>, l'App accederà ai tuoi dati solo dopo la tua autorizzazione esplicita tramite <strong>OAuth 2.0</strong>.
+    Gli ambiti (<em>scope</em>) utilizzati sono:
+  </p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/calendar.events</code> &ndash; per leggere, creare, modificare ed eliminare eventi nei tuoi calendari Google, esclusivamente per la sincronizzazione integrata nell'app.</li>
+    <li><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code> &ndash; per leggere l'elenco dei tuoi calendari Google (nome, colore e livello di accesso) e farti scegliere quali vedere nell'app. Questo permesso viene chiesto solo quando apri la schermata &laquo;Calendari sincronizzati&raquo;.</li>
+  </ul>
+  <p>
+    L'elenco dei calendari e la tua scelta restano solo sul telefono e non vengono trasmessi a server esterni.
   </p>
   <p>
-    Questo consente a SVVF di leggere, creare, modificare ed eliminare eventi nel tuo calendario Google, esclusivamente per la sincronizzazione integrata nell'app.
+    L'uso e il trasferimento ad altre app delle informazioni ricevute dalle API di Google rispettano le <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Norme sui dati utente dei servizi API di Google</a> (Google API Services User Data Policy), inclusi i requisiti di Uso limitato (Limited Use).
   </p>
 
   <h3>2.3 Dati gestiti tramite servizi cloud</h3>
   <p><strong>iOS:</strong> SVVF utilizza <strong>Apple iCloud</strong> (CloudKit e NSUbiquitousKeyValueStore) per sincronizzare eventi, configurazioni e impostazioni tra i dispositivi Apple dell'utente. I dati restano nel database privato iCloud associato all'ID Apple dell'utente.</p>
-  <p><strong>Android:</strong> SVVF utilizza <strong>Google Firebase</strong> (Authentication e Firestore) per la sincronizzazione cloud. L'accesso avviene tramite Google Sign-In ed è facoltativo. Senza login, i dati restano esclusivamente sul dispositivo. I dati sincronizzati sono archiviati su Firebase Firestore sotto l'account Google dell'utente.</p>
+  <p><strong>Android:</strong> SVVF utilizza <strong>Google Firebase</strong> (Authentication e Firestore) per la sincronizzazione cloud. L'accesso avviene tramite Google Sign-In ed è facoltativo. Senza login, i dati restano esclusivamente sul dispositivo. I dati sincronizzati sono archiviati su Firebase Firestore sotto l'account Google dell'utente. Gli eventuali allegati degli eventi (foto e documenti) sono archiviati su <strong>Firebase Storage</strong>, in un'area riservata all'account dell'utente, per poterli aprire anche dagli altri dispositivi.</p>
 
   <h3>2.4 Dati dal Calendario Apple (solo iOS)</h3>
   <p>
     Su iOS, l'App può accedere al <strong>Calendario Apple</strong> nativo tramite il framework EventKit, previa autorizzazione dell'utente. Gli eventi vengono letti localmente e non vengono trasmessi a server esterni.
   </p>
 
-  <h3>2.5 Dati raccolti automaticamente (solo Android)</h3>
+  <h3>2.5 Dati raccolti automaticamente</h3>
   <p>
-    La versione Android utilizza <strong>Firebase Crashlytics</strong> per raccogliere automaticamente informazioni anonime sugli arresti anomali dell'app (crash report). Questi dati non contengono informazioni personali identificabili e vengono utilizzati esclusivamente per migliorare la stabilità dell'app.
+    L'App (iOS e Android) utilizza <strong>Firebase Crashlytics</strong> per raccogliere automaticamente informazioni anonime sugli arresti anomali dell'app (crash report). Questi dati non contengono informazioni personali identificabili e vengono utilizzati esclusivamente per migliorare la stabilità dell'app.
   </p>
 
   <h2>3. Finalità del trattamento</h2>
@@ -137,14 +143,14 @@
     <tr>
       <td>Android</td>
       <td>DataStore, Room Database (SQLite)</td>
-      <td>Google Firebase Firestore</td>
+      <td>Google Firebase (Firestore e Storage per gli allegati)</td>
     </tr>
   </table>
   <ul>
     <li>L'App non utilizza server propri e non archivia dati su sistemi esterni diversi da Apple iCloud, Google Firebase e Google Calendar.</li>
     <li>I dati cloud sono accessibili esclusivamente dall'account dell'utente (ID Apple o account Google).</li>
     <li>I token di accesso Google non vengono conservati oltre la sessione di sincronizzazione.</li>
-    <li>Su Android, il sistema di backup automatico di Google può includere i dati dell'app per il ripristino dopo reinstallazione.</li>
+    <li>Su Android il backup automatico di Google è disattivato: i dati dell'app non vengono copiati nel backup del telefono. Dopo una reinstallazione o su un nuovo telefono si recuperano accedendo con il proprio account Google.</li>
   </ul>
 
   <h2>6. Dati della Rubrica</h2>
@@ -167,7 +173,7 @@
   </p>
   <ul>
     <li><strong>Apple Inc.</strong> — per la sincronizzazione iCloud (iOS).</li>
-    <li><strong>Google LLC</strong> — per Google Calendar, Firebase Authentication, Firebase Firestore e Firebase Crashlytics (Android).</li>
+    <li><strong>Google LLC</strong> — per Google Calendar, Firebase Authentication, Firestore e Storage (Android) e Firebase Crashlytics (iOS e Android).</li>
   </ul>
   <p>
     Le informazioni non vengono mai utilizzate per scopi pubblicitari, analitici o di profilazione.
@@ -230,7 +236,7 @@
   <ul>
     <li><strong>Apple iCloud / CloudKit</strong> (iOS) — <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Apple</a></li>
     <li><strong>Google Calendar API</strong> (iOS e Android) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li>
-    <li><strong>Google Firebase</strong> (Android: Authentication, Firestore, Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Firebase</a></li>
+    <li><strong>Google Firebase</strong> (Android: Authentication, Firestore, Storage, Crashlytics; iOS: Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Firebase</a></li>
     <li><strong>Google Sign-In</strong> (entrambe le piattaforme) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li>
   </ul>
 
