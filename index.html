@@ -56,7 +56,7 @@
   <div class="section">
     <h2>Sincronizzazione Cloud</h2>
     <p><strong>iOS:</strong> SVVF sfrutta <strong>iCloud</strong> (CloudKit) per mantenere sincronizzati eventi, preferenze e dati personali tra i dispositivi Apple dell'utente. Tutte le informazioni restano associate al proprio ID Apple.</p>
-    <p><strong>Android:</strong> SVVF utilizza <strong>Firebase</strong> (Google Cloud) per la sincronizzazione. L'utente accede con il proprio account Google e i dati vengono sincronizzati in modo sicuro tramite Firebase Firestore. L'accesso è facoltativo: senza login, i dati restano solo sul dispositivo.</p>
+    <p><strong>Android:</strong> SVVF utilizza <strong>Firebase</strong> (Google Cloud) per la sincronizzazione. L'utente accede con il proprio account Google e i dati vengono sincronizzati in modo sicuro tramite Firebase Firestore. L'accesso è facoltativo: senza login, eventi e impostazioni restano solo sul dispositivo.</p>
   </div>
 
   <div class="section">
@@ -64,11 +64,12 @@
     <p>Su entrambe le piattaforme, SVVF offre la possibilità di collegare in modo <strong>opzionale</strong> il proprio <strong>Google Calendar</strong>.
     Questa funzione consente di <strong>visualizzare, creare, modificare o eliminare eventi</strong> direttamente dall'app, sincronizzandoli con il proprio account Google.</p>
 
-    <p>L'app utilizza esclusivamente lo scope minimo richiesto da Google:
-      <br><code>https://www.googleapis.com/auth/calendar.events</code>
+    <p>L'app utilizza solo gli ambiti necessari:
+      <br><code>https://www.googleapis.com/auth/calendar.events</code> per gli eventi e
+      <br><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code> per l'elenco dei calendari, così puoi scegliere quali vedere.
     </p>
 
-    <p>Nessun dato personale, informazione di contatto o contenuto degli eventi viene raccolto o condiviso con terze parti.
+    <p>Il contenuto degli eventi non viene condiviso con terze parti.
     La sincronizzazione con Google Calendar è sempre facoltativa e può essere disattivata in qualsiasi momento dalle impostazioni dell'app.</p>
   </div>
 
@@ -89,16 +90,16 @@
       <li>Report mensili con generazione PDF</li>
       <li>Rubrica comandi VVF territoriali e uffici centrali</li>
       <li>Importazione eventi da app precedenti (CSV)</li>
-      <li>Nessuna condivisione di dati con server esterni di terze parti</li>
+      <li>Nessuna pubblicità e nessuna profilazione</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Sicurezza e Privacy</h2>
     <p>SVVF rispetta pienamente la normativa europea <strong>GDPR</strong> e le linee guida di Google e Apple per la sicurezza dei dati.
-    Ogni consenso viene richiesto in modo esplicito e l'utente può revocare l'accesso ai servizi esterni in qualsiasi momento.</p>
+    I permessi e gli accessi ai servizi esterni (Google Calendar, Calendario Apple, account) vengono chiesti in modo esplicito e si possono revocare in qualsiasi momento.</p>
 
-    <p>SVVF non archivia né trasmette informazioni a server proprietari. Tutti i dati rimangono nel dispositivo o nel cloud personale dell'utente (Apple iCloud, Google Firebase o Google Calendar).</p>
+    <p>SVVF non usa server propri. I dati dell'utente restano nel dispositivo o nel suo cloud personale (Apple iCloud, Google Firebase o Google Calendar). Le statistiche d'uso e i rapporti sugli arresti anomali vanno a Google, come spiegato nell'<a href="privacy.html">Informativa sulla Privacy</a>.</p>
   </div>
 
   <div class="section">
