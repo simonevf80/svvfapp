@@ -66,7 +66,7 @@
   <h2>1. Introduzione</h2>
   <p>
     La presente informativa descrive come l'applicazione <strong>SVVF</strong> (di seguito "l'App"), disponibile per <strong>iOS</strong> e <strong>Android</strong>, raccoglie, utilizza e protegge i dati personali degli utenti.
-    Utilizzando l'App, accetti le pratiche descritte in questa informativa e autorizzi il trattamento dei tuoi dati secondo quanto indicato di seguito.
+    Le basi giuridiche dei diversi trattamenti sono spiegate al punto 4.
   </p>
 
   <h2>2. Dati trattati</h2>
@@ -86,7 +86,7 @@
   </p>
   <ul>
     <li><code>https://www.googleapis.com/auth/calendar.events</code> &ndash; per leggere, creare, modificare ed eliminare eventi nei tuoi calendari Google, esclusivamente per la sincronizzazione integrata nell'app.</li>
-    <li><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code> &ndash; per leggere l'elenco dei tuoi calendari Google (nome, colore e livello di accesso) e farti scegliere quali vedere nell'app. Questo permesso viene chiesto solo quando apri la schermata &laquo;Calendari sincronizzati&raquo;.</li>
+    <li><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code> &ndash; per leggere l'elenco dei tuoi calendari Google (nome, colore e livello di accesso) e farti scegliere quali vedere nell'app. Questo permesso viene chiesto quando attivi Google Calendar, insieme a quello degli eventi, e puoi anche non concederlo; se manca, viene chiesto quando apri la schermata &laquo;Calendari sincronizzati&raquo;.</li>
   </ul>
   <p>
     L'elenco dei calendari e la tua scelta restano solo sul telefono e non vengono trasmessi a server esterni.
@@ -97,7 +97,7 @@
 
   <h3>2.3 Dati gestiti tramite servizi cloud</h3>
   <p><strong>iOS:</strong> SVVF utilizza <strong>Apple iCloud</strong> (CloudKit e NSUbiquitousKeyValueStore) per sincronizzare eventi, configurazioni e impostazioni tra i dispositivi Apple dell'utente. I dati restano nel database privato iCloud associato all'ID Apple dell'utente.</p>
-  <p><strong>Android:</strong> SVVF utilizza <strong>Google Firebase</strong> (Authentication e Firestore) per la sincronizzazione cloud. L'accesso avviene tramite Google Sign-In ed è facoltativo. Senza login, i dati restano esclusivamente sul dispositivo. I dati sincronizzati sono archiviati su Firebase Firestore sotto l'account Google dell'utente. Gli eventuali allegati degli eventi (foto e documenti) sono archiviati su <strong>Firebase Storage</strong>, in un'area riservata all'account dell'utente, per poterli aprire anche dagli altri dispositivi.</p>
+  <p><strong>Android:</strong> SVVF utilizza <strong>Google Firebase</strong> (Authentication e Firestore) per la sincronizzazione cloud. L'accesso avviene tramite Google Sign-In ed è facoltativo. Senza login, eventi e impostazioni restano esclusivamente sul dispositivo. I dati sincronizzati sono archiviati su Firebase Firestore sotto l'account Google dell'utente. Gli eventuali allegati degli eventi (foto e documenti) sono archiviati su <strong>Firebase Storage</strong>, in un'area riservata all'account dell'utente, per poterli aprire anche dagli altri dispositivi.</p>
 
   <h3>2.4 Dati dal Calendario Apple (solo iOS)</h3>
   <p>
@@ -106,7 +106,7 @@
 
   <h3>2.5 Dati raccolti automaticamente</h3>
   <p>
-    L'App (iOS e Android) utilizza <strong>Firebase Crashlytics</strong> per raccogliere automaticamente informazioni anonime sugli arresti anomali dell'app (crash report). Questi dati non contengono informazioni personali identificabili e vengono utilizzati esclusivamente per migliorare la stabilità dell'app.
+    L'App (iOS e Android) utilizza <strong>Firebase Crashlytics</strong> per raccogliere automaticamente informazioni sugli arresti anomali dell'app (crash report), per esempio il punto del codice in cui si è verificato l'errore, l'ultima schermata aperta, la versione dell'app, il modello del dispositivo e la versione del sistema operativo, con un identificativo casuale dell'installazione. Non sono collegate al tuo account SVVF, al tuo nome o alla tua email e vengono utilizzate esclusivamente per migliorare la stabilità dell'app.
   </p>
   <p>
     <strong>Statistiche d'uso (Android).</strong> L'App utilizza Google Analytics for Firebase per ottenere statistiche aggregate sull'uso dell'app, per esempio: quante persone la usano, quante volte e per quanto tempo, quali schermate vengono aperte, versione dell'app e del sistema operativo, paese e regione approssimativi. La posizione approssimativa è ricavata da Google dall'indirizzo IP, che non viene conservato; l'App non usa la posizione del dispositivo. Ogni installazione ha un identificativo casuale, non collegato al tuo account SVVF, al tuo nome o alla tua email. Fino alla versione 3.4 la libreria di Google può leggere anche l'identificativo pubblicitario del dispositivo (ID pubblicità); dalla versione 3.5 non lo legge più. L'App non mostra pubblicità e le statistiche non servono a profilarti né a mostrarti annunci personalizzati.
@@ -118,17 +118,17 @@
     <li>Sincronizzare gli eventi con i servizi cloud (iCloud o Firebase) e Google Calendar, se attivati dall'utente.</li>
     <li>Generare report e statistiche (PDF) per uso personale dell'utente.</li>
     <li>Garantire il corretto funzionamento e la personalizzazione dell'esperienza d'uso.</li>
-    <li>Migliorare la stabilità dell'app tramite crash reporting anonimo (iOS e Android).</li>
+    <li>Migliorare la stabilità dell'app con i rapporti sugli arresti anomali (iOS e Android).</li>
     <li>Capire, con statistiche aggregate, come viene usata l'app, per migliorarla e decidere le prossime funzioni.</li>
   </ul>
 
   <h2>4. Base giuridica del trattamento</h2>
   <p>
-    Il trattamento dei dati si basa sul <strong>consenso esplicito dell'utente</strong>, espresso durante:
+    Per le funzioni dell'app, il trattamento dei dati si basa sul <strong>consenso esplicito dell'utente</strong>, espresso durante:
   </p>
   <ul>
     <li>L'autorizzazione OAuth per Google Calendar e Google Sign-In.</li>
-    <li>La concessione dei permessi del sistema operativo (calendario, notifiche, posizione).</li>
+    <li>La concessione dei permessi del sistema operativo (vedi il punto 9).</li>
     <li>L'utilizzo volontario delle funzionalità di sincronizzazione cloud.</li>
   </ul>
   <p>
@@ -154,11 +154,12 @@
     </tr>
   </table>
   <ul>
-    <li>L'App non utilizza server propri e non archivia dati su sistemi esterni diversi da Apple iCloud, Google Firebase e Google Calendar.</li>
-    <li>I dati cloud sono accessibili esclusivamente dall'account dell'utente (ID Apple o account Google).</li>
-    <li>I token di accesso Google non vengono conservati oltre la sessione di sincronizzazione.</li>
+    <li>L'App non utilizza server propri e non archivia dati su sistemi esterni diversi da Apple iCloud, Google Firebase (compreso Google Analytics) e Google Calendar.</li>
+    <li>I dati sincronizzati sono accessibili esclusivamente dall'account dell'utente (ID Apple o account Google).</li>
+    <li>Le credenziali di accesso a Google restano solo sul dispositivo, gestite dalle librerie di Google, e servono a mantenere l'accesso; puoi revocarle in qualsiasi momento dal tuo account Google (punto 10).</li>
     <li>Su Android il backup automatico di Google è disattivato: i dati dell'app non vengono copiati nel backup del telefono. Dopo una reinstallazione o su un nuovo telefono si recuperano accedendo con il proprio account Google.</li>
     <li>Google Analytics conserva i dati dei singoli eventi per circa 2 mesi e quelli collegati all'identificativo dell'installazione fino a circa 2 mesi dopo l'ultimo utilizzo dell'app; dopo restano solo i totali aggregati, per esempio il numero di utenti al giorno.</li>
+    <li>Firebase Crashlytics conserva i rapporti sugli arresti anomali per 90 giorni.</li>
   </ul>
 
   <h2>6. Dati della Rubrica</h2>
@@ -176,14 +177,15 @@
 
   <h2>7. Condivisione dei dati</h2>
   <p>
-    I dati non vengono condivisi, ceduti o venduti a terzi.
-    I soggetti con cui i dati possono interagire sono esclusivamente:
+    I dati non vengono ceduti né venduti a terzi.
+    Vengono inviati solo ai servizi necessari al funzionamento dell'app:
   </p>
   <ul>
-    <li><strong>Apple Inc.</strong> — per la sincronizzazione iCloud (iOS).</li>
-    <li><strong>Google LLC</strong> — per Google Calendar, Firebase Authentication, Firestore e Storage (Android), Firebase Crashlytics (iOS e Android) e Google Analytics for Firebase (Android).</li>
+    <li><strong>Apple Inc.</strong> — per la sincronizzazione iCloud e per la ricerca del luogo di un evento con Mappe di Apple (iOS).</li>
+    <li><strong>Google LLC</strong> — per Google Calendar, Firebase Authentication, Firestore e Storage (Android), Firebase Crashlytics (iOS e Android), Google Analytics for Firebase (Android) e la ricerca del luogo di un evento con Google Places (Android).</li>
   </ul>
   <p>
+    Per la ricerca del luogo vengono inviati solo il testo che scrivi e il luogo che scegli, per avere i suggerimenti e l'indirizzo.
     Le informazioni non vengono mai utilizzate per scopi pubblicitari o di profilazione. Le statistiche d'uso servono solo a capire, con dati aggregati, come viene usata l'app. Per Google Analytics, Google agisce come responsabile del trattamento secondo i Termini per il trattamento dei dati di Google Ads, che valgono anche per Google Analytics.
   </p>
 
@@ -215,8 +217,8 @@
     <tr>
       <td>Calendario</td>
       <td>On-demand</td>
-      <td>On-demand</td>
-      <td>Lettura/scrittura calendario nativo</td>
+      <td>&ndash;</td>
+      <td>Lettura/scrittura del Calendario Apple</td>
     </tr>
     <tr>
       <td>Notifiche</td>
@@ -224,8 +226,20 @@
       <td>On-demand (API 33+)</td>
       <td>Promemoria eventi</td>
     </tr>
+    <tr>
+      <td>Fotocamera</td>
+      <td>On-demand</td>
+      <td>&ndash;</td>
+      <td>Scansione dei documenti da allegare agli eventi</td>
+    </tr>
+    <tr>
+      <td>Contatti</td>
+      <td>On-demand</td>
+      <td>&ndash;</td>
+      <td>Solo dalla pagina di Apple per scegliere con chi condividere un calendario</td>
+    </tr>
   </table>
-  <p>Tutti i permessi vengono richiesti nel momento in cui servono e possono essere revocati dalle impostazioni del dispositivo.</p>
+  <p>Tutti i permessi vengono richiesti nel momento in cui servono e possono essere revocati dalle impostazioni del dispositivo. Fino alla versione 3.4, su Android la libreria di Google Analytics dichiara anche il permesso per l'ID pubblicità, che Android concede all'installazione senza chiederlo (vedi il punto 2.5); dalla versione 3.5 non c'è più.</p>
 
   <h2>10. Diritti dell'utente</h2>
   <p>L'utente ha diritto di:</p>
@@ -247,12 +261,14 @@
     <li><strong>Google Calendar API</strong> (iOS e Android) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li>
     <li><strong>Google Firebase</strong> (Android: Authentication, Firestore, Storage, Crashlytics; iOS: Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Firebase</a></li>
     <li><strong>Google Analytics for Firebase</strong> (Android) — <a href="https://policies.google.com/technologies/partner-sites?hl=it" target="_blank">Come Google utilizza le informazioni delle app che usano i suoi servizi</a></li>
+    <li><strong>Google Places</strong> (Android, ricerca del luogo) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li>
+    <li><strong>Mappe di Apple</strong> (iOS, ricerca del luogo) — <a href="https://www.apple.com/legal/privacy/data/it/apple-maps/" target="_blank">Mappe di Apple e privacy</a></li>
     <li><strong>Google Sign-In</strong> (entrambe le piattaforme) — <a href="https://policies.google.com/privacy" target="_blank">Privacy Google</a></li>
   </ul>
 
   <h2>12. Trasferimenti internazionali</h2>
   <p>
-    I dati salvati su Google Firebase si trovano nell'Unione Europea: il database (Firestore) in Belgio e nei Paesi Bassi, gli allegati (Firebase Storage) a Milano.
+    Il database (Firestore) si trova nell'Unione Europea, in Belgio e nei Paesi Bassi, e gli allegati (Firebase Storage) a Milano. L'accesso all'account (Firebase Authentication, Android) funziona solo da centri dati negli Stati Uniti; i rapporti sugli arresti anomali (Crashlytics) possono essere trattati anche fuori dall'Unione Europea.
     L'uso dei servizi Google e Apple può comportare trasferimenti di dati al di fuori dello Spazio Economico Europeo.
     Tali trasferimenti avvengono nel rispetto delle garanzie previste dal GDPR, incluse le Clausole Contrattuali Standard adottate dai rispettivi provider.
     I dati di Google Analytics possono essere trattati da Google anche negli Stati Uniti, sulla base del Data Privacy Framework UE-USA, al quale Google aderisce, e, dove serve, delle Clausole Contrattuali Standard.
