@@ -46,7 +46,7 @@
 
 <body>
   <h1>Termini di Servizio</h1>
-  <p><strong>Ultimo aggiornamento:</strong> 26 ottobre 2026</p>
+  <p><strong>Ultimo aggiornamento:</strong> 19 novembre 2026</p>
 
   <h2>1. Accettazione dei Termini</h2>
   <p>
@@ -85,17 +85,20 @@
   <h3>4.1 Integrazione con Google Calendar</h3>
   <p>
     Disponibile su entrambe le piattaforme. L'integrazione è facoltativa e richiede autorizzazione esplicita tramite <strong>OAuth 2.0</strong>.
-    L'unico ambito (<em>scope</em>) utilizzato è:
+    Gli ambiti (<em>scope</em>) utilizzati sono:
   </p>
-  <p><code>https://www.googleapis.com/auth/calendar.events</code></p>
-  <p>Tale ambito consente all'App di:</p>
   <ul>
-    <li>Visualizzare gli eventi presenti nel tuo Google Calendar.</li>
+    <li><code>https://www.googleapis.com/auth/calendar.events</code> &ndash; per gli eventi;</li>
+    <li><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code> &ndash; per l'elenco dei calendari, così puoi scegliere quali vedere nell'App.</li>
+  </ul>
+  <p>Questi ambiti consentono all'App di:</p>
+  <ul>
+    <li>Visualizzare gli eventi presenti nei tuoi calendari Google e l'elenco dei calendari.</li>
     <li>Creare nuovi eventi da SVVF.</li>
     <li>Modificare o eliminare eventi già esistenti, solo su tua esplicita azione.</li>
   </ul>
   <p>
-    Nessun altro dato viene raccolto o trattato. L'App non utilizza, memorizza o condivide contenuti degli eventi con terze parti.
+    L'App non condivide i contenuti degli eventi con terze parti; li conserva solo sul dispositivo, per mostrarli anche senza rete.
     L'utente può revocare l'accesso in qualunque momento visitando:
     <a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a>.
   </p>
@@ -103,14 +106,14 @@
   <h3>4.2 Sincronizzazione iCloud (solo iOS)</h3>
   <p>
     La versione iOS utilizza iCloud per mantenere sincronizzati eventi, preferenze e configurazioni sui dispositivi Apple associati allo stesso ID Apple.
-    Nessuna informazione viene inviata a server esterni diversi da quelli di Apple.
+    I dati sincronizzati restano su iCloud. A Google vanno solo i rapporti sugli arresti anomali (Firebase Crashlytics) e, se colleghi Google Calendar, i dati del calendario, come spiegato nell'<a href="privacy.html">Informativa sulla Privacy</a>.
   </p>
 
   <h3>4.3 Sincronizzazione Firebase (solo Android)</h3>
   <p>
     La versione Android utilizza Google Firebase per la sincronizzazione cloud. L'accesso avviene tramite Google Sign-In ed è completamente facoltativo.
     Senza login, l'App funziona normalmente con i dati salvati localmente sul dispositivo.
-    I dati sincronizzati sono archiviati su Firebase Firestore e accessibili esclusivamente dall'account Google dell'utente.
+    I dati sincronizzati sono archiviati su Firebase Firestore (gli allegati su Firebase Storage) e accessibili esclusivamente dall'account Google dell'utente.
   </p>
 
   <h3>4.4 Apple Calendar (solo iOS)</h3>
@@ -124,7 +127,7 @@
     I dati personali restano sotto il totale controllo dell'utente e vengono utilizzati solo per fornire le funzionalità dell'App.
   </p>
   <p>
-    Nessuna informazione viene condivisa per finalità pubblicitarie, di analisi o di profilazione.
+    Nessuna informazione viene usata per pubblicità o profilazione. Le statistiche d'uso (Android) e i rapporti sugli arresti anomali servono solo a far funzionare e migliorare l'App.
     Maggiori dettagli sono disponibili nell'<a href="privacy.html">Informativa sulla Privacy</a>.
   </p>
 
